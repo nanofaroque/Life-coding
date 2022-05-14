@@ -1,6 +1,5 @@
 package dailycodings;
 
-import edu.princeton.cs.algs4.ST;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.Arrays;

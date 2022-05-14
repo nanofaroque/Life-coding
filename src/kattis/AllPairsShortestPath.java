@@ -1,7 +1,5 @@
 package kattis;
 
-import edu.princeton.cs.algs4.In;
-
 public class AllPairsShortestPath {
     public static void main(String[] args) {
         int INF = 9999;

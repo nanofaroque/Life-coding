@@ -1,6 +1,6 @@
 package dailycodings;
 
-import javafx.util.Pair;
+import com.sun.tools.javac.util.Pair;
 import leetcode.TreeNode;
 
 import java.util.HashMap;
@@ -16,8 +16,8 @@ public class DailyCoding_1020 {
         node.right.right=new TreeNode(15);
         int k=20;
         Pair<TreeNode,TreeNode> res= findNodePair(node,20);
-        System.out.println(res.getKey().val);
-        System.out.println(res.getValue().val);
+        System.out.println(res.fst.val);
+        System.out.println(res.snd.val);
     }
 
     private static Pair<TreeNode,TreeNode> findNodePair(TreeNode node, int k) {
