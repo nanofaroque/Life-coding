@@ -30,14 +30,4 @@ public class Problem_2275 {
         }
         return max;
     }
-
-    private void recurse(int[] candidates, int start, int val, int length, int count) {
-        if (start >= length) return;
-        if ((val & candidates[start]) > 0) {
-            max = Math.max(count, max);
-            recurse(candidates, start + 1, (val & candidates[start]), length, count + 1);
-
-        }
-        recurse(candidates, start + 1, val, length, count);
-    }
 }
