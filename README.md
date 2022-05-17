@@ -44,16 +44,7 @@ Tree:
 ## Dynamic Programming   
 * Understanding Longest common subsequence: https://www.youtube.com/watch?v=43P0xZp3FU4
 * https://avikdas.com/2019/04/15/a-graphical-introduction-to-dynamic-programming.html
-* Great example of dynamic programming in realworld: https://avikdas.com/2019/05/14/real-world-dynamic-programming-seam-carving.html
-   
-## Understanding SSTable
-
-    * https://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/
-    * https://hackernoon.com/fundamentals-of-system-design-part-3-8da61773a631
-   
-## Java Code Beauty: 
-
-Composition Function: http://www.deadcoderising.com/2015-09-07-java-8-functional-composition-using-compose-and-andthen/
+* Great example of dynamic programming in real world: https://avikdas.com/2019/05/14/real-world-dynamic-programming-seam-carving.html
 
 ### Quick Notes   
 #### Counting character frequency in a string. 
