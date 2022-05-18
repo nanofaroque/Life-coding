@@ -206,6 +206,17 @@ AND 1 1 1 1 0 1 1 1
     1 0 0 1 0 1 0 1
 
 ```
+* How to make a particular integer to a certain number of bit. such as 2 in binary 01 but we 
+want to do some operation with bigger number such 7 in binary 111. We need to make 2 into 3 digit binary. 
+
+**Number to represent in a specific number of bits?**
+```
+  Int num = 1<<L . Left shift. L is the number of bits and it generates L+1 bit with an extra 1 at the beginning
+  If L=7, then num=128 meaning 10000000
+
+  Now if you do OR operation with the number you want, let say 2
+  10000000 | 10=>10000010, now skip the first bit. You will get 0000010
+```
 ### Shortcut code snippet
 * If you need to assign value to a variable based on comparison of others two: follow this
 ``` a = b == c ? 1 : 0```
