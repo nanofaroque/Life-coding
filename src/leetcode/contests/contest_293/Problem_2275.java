@@ -15,15 +15,12 @@ public class Problem_2275 {
         int num = 1 << 24;
         int[] bits = new int[24];
         for (int candidate : candidates) {
-
             int result = num | candidate;
             for (int i = 1; i < 25; i++) {
                 if ((result & 1) == 1) {
-                    System.out.println("1: " + i);
                     bits[i-1] += 1;
                 }
                 result >>= 1;
-
             }
         }
         return Arrays.stream(bits).max().getAsInt();
