@@ -3,8 +3,8 @@ New Year Gift to every fellow time-constrained engineer out there looking for a 
 Good luck and Happy New Year!
 Array
 
-- Two Sum - https://leetcode.com/problems/two-sum/
-- Best Time to Buy and Sell Stock - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+- Two Sum - https://leetcode.com/problems/two-sum/ (05/24/2022)
+- Best Time to Buy and Sell Stock - https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ (05/24/2022)
 - Contains Duplicate - https://leetcode.com/problems/contains-duplicate/
 - Product of Array Except Self - https://leetcode.com/problems/product-of-array-except-self/
 - Maximum Subarray - https://leetcode.com/problems/maximum-subarray/
