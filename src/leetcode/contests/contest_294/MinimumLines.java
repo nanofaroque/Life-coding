@@ -43,7 +43,6 @@ public class MinimumLines {
             double gdxCurrent=(double) dx/gcd;
             if (gdxCurrent!=gdx || gdyCurrent!=gdy) {
                 count += 1;
-
             }
             gdx = gdxCurrent;
             gdy = gdyCurrent;
