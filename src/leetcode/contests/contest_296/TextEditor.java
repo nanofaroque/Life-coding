@@ -21,7 +21,7 @@ public class TextEditor {
     }
 
     public void addText(String text) {
-        sb.append(text);
+        sb.insert(curr,text);
         curr += text.length();
     }
 
