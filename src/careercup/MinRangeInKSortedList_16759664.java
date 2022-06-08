@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
-public class MinRangeInKSortedList {
+public class MinRangeInKSortedList_16759664 {
 
     /**
      * Problem Statement:
@@ -22,11 +22,11 @@ public class MinRangeInKSortedList {
      * The smallest range here would be [20, 24] as it contains 24 from list 1, 20 from list 2, and 22 from list 3.
      */
 
-    MinRangeInKSortedList minRangeInKSortedList;
+    MinRangeInKSortedList_16759664 minRangeInKSortedList;
 
     @BeforeEach
     public void init() {
-        minRangeInKSortedList = new MinRangeInKSortedList();
+        minRangeInKSortedList = new MinRangeInKSortedList_16759664();
 
     }
 
