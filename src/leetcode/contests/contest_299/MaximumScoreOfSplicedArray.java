@@ -1,22 +1,18 @@
 package leetcode.contests.contest_299;
 
+import java.util.Arrays;
+
 public class MaximumScoreOfSplicedArray {
     public static void main(String[] args) {
         MaximumScoreOfSplicedArray maxi = new MaximumScoreOfSplicedArray();
         maxi.maximumsSplicedArrayByUsingSegmentTree(new int[]{60, 60, 60}, new int[]{10, 90, 10});
+        System.out.println(
+                maxi.maximumsSplicedArray(new int[]{60, 60, 60}, new int[]{10, 90, 10}));
     }
 
     public int maximumsSplicedArrayByUsingSegmentTree(int[] nums1, int[] nums2) {
         SegmentTree st1 = new SegmentTree(nums1);
-        //int[] res1 = st1.result;
-        //MasterPrinter.printArray(res1);
-
         SegmentTree st2 = new SegmentTree(nums2);
-        //int[] res2 = st2.result;
-        //MasterPrinter.printArray(res2);
-
-        //int s = st2.rangeSum(4, 4);
-        //System.out.println(s);
 
         int len = nums1.length;
         int totalSum1 = st1.rangeSum(0, len - 1);
@@ -38,9 +34,40 @@ public class MaximumScoreOfSplicedArray {
 
             }
         }
-
         System.out.println("max: " + max);
         return max;
+    }
+
+    public int maximumsSplicedArray(int[] nums1, int[] nums2) {
+        int leftMax = maxSubArraySum(nums1, nums2);
+        int rightMax = maxSubArraySum(nums2, nums1);
+
+        int nums1Sum = Arrays.stream(nums1).sum();
+        int nums2Sum = Arrays.stream(nums2).sum();
+
+        return Math.max(nums2Sum + leftMax, nums1Sum + rightMax);
+    }
+
+    public static int maxSubArraySum(int[] nums1, int[] nums2) {
+        int maxSoFar = Integer.MIN_VALUE;
+        int curMax = 0;
+        int len=nums1.length;
+        int[] diff = new int[len];
+
+        // calculate diff array
+        for (int i = 0; i < len; i++) {
+            diff[i]=nums1[i]-nums2[i];
+        }
+
+
+        for (int i = 0; i < diff.length; i++) {
+            curMax += diff[i];
+            maxSoFar = Math.max(curMax, maxSoFar);
+            if (curMax < 0) {
+                curMax = 0;
+            }
+        }
+        return maxSoFar;
     }
 
     class SegmentTree {
