@@ -1,3 +1,7 @@
+package leetcode.contests.contest_299;
+
+import java.util.*;
+
 public class LC_2322 {
     /**
      * Problem Statement:
