@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.blind_75;
 
 public class LC_152 {
     public static void main(String[] args) {
