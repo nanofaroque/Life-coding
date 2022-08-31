@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class LC_17 {
     public static void main(String[] args) {
-        LC_17 p=new LC_17();
+        LC_17 p = new LC_17();
         p.letterCombinations("23");
     }
 
@@ -15,8 +15,7 @@ public class LC_17 {
 
     public List<String> letterCombinations(String digits) {
         List<String> result = new ArrayList<>();
-        if(digits.length()==0) return result;
-
+        if (digits.length() == 0) return result;
         keys = new HashMap<>();
         keys.put('1', "");
         keys.put('2', "abc");
@@ -40,13 +39,11 @@ public class LC_17 {
             return;
         }
 
-
         String letters = keys.get(digits.charAt(curr));
         for (char ch : letters.toCharArray()) {
             sb.append(ch);
-            dfs(digits, length, curr + 1,sb,result);
-            sb.deleteCharAt(sb.length()-1);
+            dfs(digits, length, curr + 1, sb, result);
+            sb.deleteCharAt(sb.length() - 1);
         }
-
     }
 }
