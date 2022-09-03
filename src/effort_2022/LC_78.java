@@ -1,3 +1,10 @@
+package effort_2022;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class LC_78 {
      Set<List<Integer>> set;
     public List<List<Integer>> subsets(int[] nums) {

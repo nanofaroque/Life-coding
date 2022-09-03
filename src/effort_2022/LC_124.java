@@ -1,3 +1,7 @@
+package effort_2022;
+
+import leetcode.TreeNode;
+
 public class LC_124 {
     static int gMax;
     public int maxPathSum(TreeNode root) {
