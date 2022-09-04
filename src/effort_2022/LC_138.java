@@ -10,39 +10,11 @@ public class LC_138 {
         Node next;
         Node random;
 
-        public Node(int val) {
+        public Node(int val, Node next,Node random) {
             this.val = val;
             this.next = null;
             this.random = null;
         }
-    }
-
-    public static void main(String[] args) {
-        Node seven=new Node(7);
-        Node thirteen=new Node(13);
-        Node eleven=new Node(11);
-        Node ten=new Node(10);
-        Node one=new Node(1);
-
-        seven.next=thirteen;
-        seven.random=null;
-
-        thirteen.next=eleven;
-        thirteen.random=seven;
-
-        eleven.next=ten;
-        eleven.random=one;
-
-        ten.next=one;
-        ten.random=eleven;
-
-        one.next=null;
-        one.random=seven;
-
-        LC_138 p = new LC_138();
-        p.copyRandomList(seven);
-
-
     }
     Map<Node, Node> visited = new HashMap<>();
 
