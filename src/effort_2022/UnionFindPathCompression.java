@@ -4,7 +4,6 @@ public class UnionFindPathCompression {
     static class Subset {
         int parent;
         int rank;
-
         Subset(int parent, int rank) {
             this.parent = parent;
             this.rank = rank;
@@ -32,7 +31,6 @@ public class UnionFindPathCompression {
             subsets[a].parent = p;
             subsets[b].rank += 1;
         }
-
     }
 
     int isCycle(Subset[] subsets, int src, int dest) {
@@ -59,7 +57,5 @@ public class UnionFindPathCompression {
         System.out.println(p.isCycle(subsets,1,2));
         System.out.println(p.isCycle(subsets,0,2));
         System.out.println(subsets);
-
-
     }
 }
