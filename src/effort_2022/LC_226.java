@@ -1,3 +1,7 @@
+package effort_2022;
+
+import leetcode.TreeNode;
+
 class LC_226 {
     public TreeNode invertTree(TreeNode root) {
         if(root==null) return root;

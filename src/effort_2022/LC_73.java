@@ -1,3 +1,8 @@
+package effort_2022;
+
+import java.util.HashSet;
+import java.util.Set;
+
 class LC_73 {
     int R,C;
     Set<Integer> pRows; //=new HashSet<>();
