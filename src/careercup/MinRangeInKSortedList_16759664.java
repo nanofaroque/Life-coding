@@ -23,11 +23,8 @@ public class MinRangeInKSortedList_16759664 {
 
         for(int i=0;i<input.size();i++){
             List<Integer> l=input.get(i);
-
             element.add(l.get(0));
             temp.add(new int[]{l.get(0),0,i});
-
-
         }
         System.out.println(temp);
         int gMin=Integer.MAX_VALUE;
