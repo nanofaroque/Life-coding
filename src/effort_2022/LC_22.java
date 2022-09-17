@@ -1,7 +1,9 @@
 package effort_2022;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
+import java.util.List;
 
 public class LC_22 {
     List<String> result;
@@ -44,7 +46,6 @@ public class LC_22 {
                     stack.poll();
                 } else stack.push(c);
             }
-
         }
         return stack.isEmpty();
     }
