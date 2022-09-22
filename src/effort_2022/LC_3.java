@@ -6,26 +6,25 @@ import java.util.Map;
 public class LC_3 {
     public static void main(String[] args) {
         LC_3 p = new LC_3();
-        p.lengthOfLongestSubstring("au");
+        int res = p.lengthOfLongestSubstring("aab");
+        System.out.println(res);
     }
 
     public int lengthOfLongestSubstring(String s) {
-        if(s.length()==0)return 0;
-        int lastPosition=-1;
-        Map<Character,Integer> map=new HashMap<>();
-        int max=1;
+        if (s.length() == 0) return 0;
+        Map<Character, Integer> map = new HashMap<>();
+        int max = 0;
+        int prev = 0;
         for (int i = 0; i < s.length(); i++) {
-            while (i < s.length() && !map.containsKey(s.charAt(i))) {
-                map.put(s.charAt(i),i);
-                i++;
+            char c = s.charAt(i);
+            if (map.containsKey(c)) {
+                if (map.get(c) >= prev) { // since map contains all the character, we might go back.
+                    // need to check forward only
+                    prev = map.get(c) + 1;
+                }
             }
-
-            if(i>=s.length()){
-                max=Math.max(i-lastPosition,max);
-            }else lastPosition=map.get(s.charAt(i));
-            max=Math.max(i-lastPosition,max);
-            if(i< s.length())
-                map.put(s.charAt(i),i);
+            max = Math.max(max, i - prev + 1);
+            map.put(c, i);
         }
         return max;
     }
