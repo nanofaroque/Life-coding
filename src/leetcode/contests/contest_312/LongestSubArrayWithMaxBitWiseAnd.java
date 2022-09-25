@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-package leetcode.contests.contest_312;public class LongestSubArrayWithMaxBitWiseAnd {
-=======
 package leetcode.contests.contest_312;
 
 import java.util.Arrays;
@@ -33,5 +30,4 @@ public class LongestSubArrayWithMaxBitWiseAnd {
         }
         return res;
     }
->>>>>>> c796046 (contest 132)
 }

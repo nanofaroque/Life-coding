@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-package leetcode.contests.contest_312;public class AllGoodIndices {
-=======
 package leetcode.contests.contest_312;
 
 import others.MasterPrinter;
@@ -56,5 +53,4 @@ public class AllGoodIndices {
         MasterPrinter.printArray(right);
         return res;
     }
->>>>>>> c796046 (contest 132)
 }
