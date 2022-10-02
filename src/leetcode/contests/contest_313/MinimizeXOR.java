@@ -18,6 +18,10 @@ public class MinimizeXOR {
         int diff = countSetBitn2 - countSetBitn1;
         if (diff == 0) return num1;
         int i = n1.length() - 1;
+        // How to minimize XOR, when both are the same number. So we create a string builder on
+        // first string.
+
+        // If we need change the bit for now to meet the counter requirements
         if (diff > 0) {
             while (diff != 0) {
                 if (sb.charAt(i) == '0') {
