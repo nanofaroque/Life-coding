@@ -222,3 +222,36 @@ want to do some operation with bigger number such 7 in binary 111. We need to ma
 ``` a = b == c ? 1 : 0```
 means if b and c are equal assign a=1 or a=0
 
+### Binary Matrix to Integer
+```
+We want to convert 
+0 0    into: 1 1 0 0 
+1 1
+
+1 0    into: 1 0 1 1 
+0 1
+
+a b
+c d    into: d c b a
+
+Q1: Could you please further explain about the logic of transferring the matrix to int?
+sum(cell << (i * n + j) for i, row in enumerate(mat) for j, cell in enumerate(row))
+I wonder how it works and why it works.
+
+A1: For Input: mat = [[0,0],[0,1]], map it to 0b1000, that is, mapping mat[i][j] to the (i * n + j)th bit of an int. specifically,
+mat[0][0] = 0, corresponds to 0th bit, which is 0;
+mat[0][1] = 0, corresponds to 1st bit, which is 0;
+mat[1][0] = 0, corresponds to 2nd bit, which is 0;
+mat[1][1] = 1, corresponds to 3rd bit, which is 1;
+
+After mapping, any operations on the binary cells of the mat are equals to the operations on the corresponding bits of the mapped int. That's why it works.
+
+Q2: Why do you use "|" to initialize the matrix and use "^" to calculate the next?
+
+A2:
+
+When using 0 |= b, where b = 0 or 1, the result is b; you can change it to
+start  += mat[i][j] << (i * n + j);
+Use next ^ 1 << k (where k = i * n + j) to flip kth bit of next, which is equal to flipping the corresponding cell (i, j) in the matrix.
+
+```
