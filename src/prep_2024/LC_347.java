@@ -7,17 +7,6 @@ public class LC_347 {
         LC_347 l = new LC_347();
         l.topKFrequent(new int[]{5, 3, 1, 1, 1, 3, 73, 1}, 2);
     }
-
-    class Item {
-        int key;
-        int count;
-
-        public Item(int k, int c) {
-            this.key = k;
-            this.count = c;
-        }
-    }
-
     public int[] topKFrequent(int[] nums, int k) {
         Map<Integer, Integer> map = new HashMap<>();
         List<int[]> list = new ArrayList<>();
@@ -25,6 +14,7 @@ public class LC_347 {
             map.compute(x, (key, value) -> value == null ? 1 : value + 1);
         }
 
+        
         map.entrySet()
                 .stream()
                 .parallel()
