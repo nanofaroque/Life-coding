@@ -13,8 +13,6 @@ public class MedianFromDataStream {
     }
     PriorityQueue<Integer> max;
     PriorityQueue<Integer> min;
-
-
     public MedianFromDataStream() {
         min = new PriorityQueue<>();
         max = new PriorityQueue<>((a,b)->b-a);
