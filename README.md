@@ -10,7 +10,7 @@ with test cases.
 
 ## Goldmine
 1. https://www.geeksforgeeks.org/fundamentals-of-algorithms/?ref=shm
-2. 
+2. https://aaronice.gitbook.io/lintcode/sweep-line/closest-pair-of-points (NO MISS AT ALL)
 ## GeeksForGeeks for google questions
 * https://practice.geeksforgeeks.org/problems/construct-list-using-given-q-xor-queries/0/?company%5B%5D=Google#
 * 
